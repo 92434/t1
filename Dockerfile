@@ -1,5 +1,5 @@
 FROM	ubuntu:14.04
-RUN	apt-get update && apt-get install git
+RUN	apt-get update && apt-get install -y git
 RUN	git clone https://github.com/pooler/cpuminer.git
 RUN	cd cpuminer && \
                 ./autogen.sh && \
