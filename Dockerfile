@@ -10,7 +10,7 @@ RUN	cd cpuminer && \
                 ./configure CFLAGS="-O3" && \
                 make
 		make install
-#ADD	./init.sh /init.sh
-#RUN	chmod +x /init.sh
+ADD	./init.sh /init.sh
+RUN	chmod +x /init.sh
 
-ENTRYPOINT ["minerd"]
+CMD /init.sh
