@@ -10,5 +10,6 @@ RUN	cd cpuminer && \
                 ./configure CFLAGS="-O3" && \
                 make
 ADD	./init.sh /init.sh
+RUN	chmod +x /init.sh
 
 CMD	["/init.sh"]
