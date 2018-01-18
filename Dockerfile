@@ -1,6 +1,6 @@
 FROM	ubuntu:14.04
-RUN	git clone https://github.com/92434/cpuminer2
-RUN	cd cpuminer2 && \
+RUN	git clone https://github.com/pooler/cpuminer.git
+RUN	cd cpuminer && \
                 ./autogen.sh && \
                 ./configure CFLAGS="-O3" && \
                 make
