@@ -9,7 +9,8 @@ RUN	cd cpuminer && \
                 ./autogen.sh && \
                 ./configure CFLAGS="-O3" && \
                 make
-ADD	./init.sh /init.sh
-RUN	chmod +x /init.sh
+		make install
+#ADD	./init.sh /init.sh
+#RUN	chmod +x /init.sh
 
-CMD	["/init.sh"]
+ENTRYPOINT ["minerd"]
